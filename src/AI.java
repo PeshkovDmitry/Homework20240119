@@ -11,12 +11,20 @@ public class AI {
 
     void turn(Field field) {
         int x, y;
-        do {
-            x = random.nextInt(field.getSize());
-            y = random.nextInt(field.getSize());
-        } while (!field.isCellValid(x, y));
+        FieldDot recommendedDot =  Advisor.getRecommendedDot(field);
+        if (recommendedDot.isUndefined()) {
+            do {
+                x = random.nextInt(field.getSize());
+                y = random.nextInt(field.getSize());
+            } while (!field.isCellValid(x, y));
+        } else {
+            x = recommendedDot.getX();
+            y = recommendedDot.getY();
+        }
         field.setDot(x, y, DOT);
     }
+
+
 
 
 }

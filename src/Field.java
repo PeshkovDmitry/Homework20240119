@@ -12,8 +12,10 @@ public class Field {
     private final String MSG_HUMAN_WON = "Вы победили!";
     private final String MSG_AI_WON = "Победил компьютер!";
 
+
     private char[][] map;
     private String gameOverMsg;
+
 
     public Field(int field_size, int cell_size){
         FIELD_SIZE = field_size;
@@ -31,11 +33,23 @@ public class Field {
         gameOverMsg = null;
     }
 
+    public char[][] getMap() {
+        char[][] newMap = new char[FIELD_SIZE][FIELD_SIZE];
+        for (int i = 0; i < FIELD_SIZE; i++) {
+            for (int j = 0; j < FIELD_SIZE; j++) {
+                newMap[i][j] = map[i][j];
+            }
+        }
+        return newMap;
+    }
+
     int getSize() { return FIELD_SIZE; }
 
     char getHumanDot() { return HUMAN_DOT; }
 
     char getAIDot() { return AI_DOT; }
+
+    char getEmptyDot() { return EMPTY_DOT; }
 
     boolean isGameOver() { return gameOverMsg != null; }
 
@@ -103,6 +117,16 @@ public class Field {
         if (map[x][y] == EMPTY_DOT)
             return true;
         return false;
+    }
+
+    public Field clone() {
+        Field newField = new Field(FIELD_SIZE, CELL_SIZE);
+        for (int i = 0; i < FIELD_SIZE; i++) {
+            for (int j = 0; j < FIELD_SIZE; j++) {
+                newField.setDot(i, j, map[i][j]);
+            }
+        }
+        return newField;
     }
 
     public void paint(Graphics2D g) {
