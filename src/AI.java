@@ -17,4 +17,6 @@ public class AI {
         } while (!field.isCellValid(x, y));
         field.setDot(x, y, DOT);
     }
+
+
 }

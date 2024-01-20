@@ -8,9 +8,9 @@ public class Field {
     private final char HUMAN_DOT = 'x';
     private final char AI_DOT = 'o';
     private final char EMPTY_DOT = '.';
-    private final String MSG_DRAW = "Draw, sorry...";
-    private final String MSG_HUMAN_WON = "YOU WON!";
-    private final String MSG_AI_WON = "AI WON!";
+    private final String MSG_DRAW = "Видимо, ничья...";
+    private final String MSG_HUMAN_WON = "Вы победили!";
+    private final String MSG_AI_WON = "Победил компьютер!";
 
     private char[][] map;
     private String gameOverMsg;
@@ -60,15 +60,40 @@ public class Field {
     }
 
     boolean checkWin(char dot) {
-        // checking horizontals / verticals
-        for (int i = 0; i < FIELD_SIZE; i++)
-            if ((map[i][0] == dot && map[i][1] == dot && map[i][2] == dot) ||
-                    (map[0][i] == dot && map[1][i] == dot && map[2][i] == dot))
+        boolean mainDiagonal = true;
+        boolean notMainDiagonal = true;
+        for (int i = 0; i < FIELD_SIZE; i++) {
+            boolean vertical = true;
+            for (int j = 0; j < FIELD_SIZE; j++) {
+                if (map[j][i] !=  dot) {
+                    vertical = false;
+                }
+            }
+            if (vertical) {
                 return true;
-        // checking diagonals
-        if ((map[0][0] == dot && map[1][1] == dot && map[2][2] == dot) ||
-                (map[2][0] == dot && map[1][1] == dot && map[0][2] == dot))
+            }
+            boolean horizontal = true;
+            for (int j = 0; j < FIELD_SIZE; j++) {
+                if (map[i][j] !=  dot) {
+                    horizontal = false;
+                }
+            }
+            if (horizontal) {
+                return true;
+            }
+            if (map[i][i] != dot) {
+                mainDiagonal = false;
+            }
+            if (map[i][FIELD_SIZE - 1 - i] != dot) {
+                notMainDiagonal = false;
+            }
+        }
+        if (mainDiagonal) {
             return true;
+        }
+        if (notMainDiagonal) {
+            return true;
+        }
         return false;
     }
 

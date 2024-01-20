@@ -7,17 +7,17 @@ import java.awt.event.MouseEvent;
 
 
 public class TicTacToe extends JFrame {
-    final String TITLE_OF_PROGRAM = "Tic Tac Toe";
+    final String TITLE_OF_PROGRAM = "Крестики-нолики";
     final int WINDOW_SIZE = 330;
     final int WINDOW_DX = 7;
     final int WINDOW_DY = 55;
     final int FIELD_SIZE = 3;
     final int CELL_SIZE = WINDOW_SIZE / FIELD_SIZE;
-    final String BTN_INIT = "New game";
-    final String BTN_EXIT = "Exit";
+    final String BTN_INIT = "Новая игра";
+    final String BTN_EXIT = "Выход";
 
-    Panel panel;        // panel for rendering (drawing)
-    Field field;        // declare a field of game object
+    Panel panel;
+    Field field;
     Human human;
     AI ai;
 
@@ -44,26 +44,20 @@ public class TicTacToe extends JFrame {
                             TicTacToe.this, field.getGameOverMsg());
             }
         });
+
         JButton init = new JButton(BTN_INIT);
-        init.addActionListener(e -> { // lambda version
+        init.addActionListener(e -> {
             field.init();
             panel.repaint();
         });
         JButton exit = new JButton(BTN_EXIT);
-        //exit.addActionListener(e -> System.exit(0));
-        exit.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.exit(0);
-            }
-        });
-
+        exit.addActionListener(e -> System.exit(0));
         JPanel panelBtn = new JPanel();
-        panelBtn.setLayout(new GridLayout()); // for panel of buttons
+        panelBtn.setLayout(new GridLayout());
         panelBtn.add(init);
         panelBtn.add(exit);
 
-        //setLayout(new BorderLayout()); // by default
+        setLayout(new BorderLayout());
         add(panelBtn, BorderLayout.SOUTH);
         add(panel, BorderLayout.CENTER);
         setVisible(true);
