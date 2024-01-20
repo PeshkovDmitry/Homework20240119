@@ -1,4 +1,3 @@
-package ru.gb.jcore.tictactoe;
 
 import java.awt.*;
 

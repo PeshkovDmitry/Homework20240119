@@ -1,5 +1,3 @@
-package ru.gb.jcore.tictactoe;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;

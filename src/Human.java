@@ -1,4 +1,3 @@
-package ru.gb.jcore.tictactoe;
 
 public class Human {
     private final char DOT;

@@ -1,5 +1,3 @@
-package ru.gb.jcore.tictactoe;
-
 import java.util.Random;
 
 public class AI {
