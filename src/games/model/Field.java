@@ -1,3 +1,4 @@
+package games.model;
 
 import java.awt.*;
 
@@ -43,19 +44,19 @@ public class Field {
         return newMap;
     }
 
-    int getSize() { return FIELD_SIZE; }
+    public int getSize() { return FIELD_SIZE; }
 
-    char getHumanDot() { return HUMAN_DOT; }
+    public char getHumanDot() { return HUMAN_DOT; }
 
-    char getAIDot() { return AI_DOT; }
+    public char getAIDot() { return AI_DOT; }
 
-    char getEmptyDot() { return EMPTY_DOT; }
+    public char getEmptyDot() { return EMPTY_DOT; }
 
-    boolean isGameOver() { return gameOverMsg != null; }
+    public boolean isGameOver() { return gameOverMsg != null; }
 
-    String getGameOverMsg() { return gameOverMsg; }
+    public String getGameOverMsg() { return gameOverMsg; }
 
-    void setDot(int x, int y, char dot) { // set dot and check fill and win
+    public void setDot(int x, int y, char dot) { // set dot and check fill and win
         map[x][y] = dot;
         if (checkWin(HUMAN_DOT))
             gameOverMsg = MSG_HUMAN_WON;
@@ -111,7 +112,7 @@ public class Field {
         return false;
     }
 
-    boolean isCellValid(int x, int y) {
+    public boolean isCellValid(int x, int y) {
         if (x < 0 || y < 0 || x > FIELD_SIZE - 1 || y > FIELD_SIZE - 1)
             return false;
         if (map[x][y] == EMPTY_DOT)

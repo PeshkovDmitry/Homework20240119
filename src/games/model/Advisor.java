@@ -1,3 +1,7 @@
+package games.model;
+
+import games.model.FieldDot;
+
 public class Advisor {
 
     /**
@@ -7,16 +11,16 @@ public class Advisor {
      */
     public static FieldDot getRecommendedDot(Field field) {
         FieldDot recommendedDot;
-        // Проверяем, есть ли точка, обеспечивающая выигрыш одним ходом
-        recommendedDot = getWinnerDot(field.getMap(), field.getAIDot(), field.getEmptyDot(), field.getSize());
-        if (!recommendedDot.isUndefined()) {
-            return recommendedDot;
-        }
-        // Проверяем, есть ли точка, обеспечивающая выигрыш человека одним ходом
-        recommendedDot = getWinnerDot(field.getMap(), field.getHumanDot(), field.getEmptyDot(), field.getSize());
-        if (!recommendedDot.isUndefined()) {
-            return recommendedDot;
-        }
+//        // Проверяем, есть ли точка, обеспечивающая выигрыш одним ходом
+//        recommendedDot = getWinnerDot(field.getMap(), field.getAIDot(), field.getEmptyDot(), field.getSize());
+//        if (!recommendedDot.isUndefined()) {
+//            return recommendedDot;
+//        }
+//        // Проверяем, есть ли точка, обеспечивающая выигрыш человека одним ходом
+//        recommendedDot = getWinnerDot(field.getMap(), field.getHumanDot(), field.getEmptyDot(), field.getSize());
+//        if (!recommendedDot.isUndefined()) {
+//            return recommendedDot;
+//        }
         return new FieldDot();
     }
 

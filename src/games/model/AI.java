@@ -1,3 +1,8 @@
+package games.model;
+
+import games.model.Advisor;
+import games.model.FieldDot;
+
 import java.util.Random;
 
 public class AI {
@@ -9,7 +14,7 @@ public class AI {
         random = new Random();
     }
 
-    void turn(Field field) {
+    public void turn(Field field) {
         int x, y;
         FieldDot recommendedDot =  Advisor.getRecommendedDot(field);
         if (recommendedDot.isUndefined()) {
@@ -23,8 +28,4 @@ public class AI {
         }
         field.setDot(x, y, DOT);
     }
-
-
-
-
 }
