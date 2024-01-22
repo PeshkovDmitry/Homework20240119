@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4dca871-d266-42ce-8346-6bc78173638e" name="Changes" comment="Рефакторинг исходного кода">
+    <list default="true" id="f4dca871-d266-42ce-8346-6bc78173638e" name="Changes" comment="Проработал алгоритм поиска точки для выигрыша следующим ходом, или, если таковой нет, для предотвращения выигрыша человека следующим ходом.">
+      <change afterPath="$PROJECT_DIR$/src/games/model/OptimumDot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/games/model/AI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/model/AI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/games/model/FieldDot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/model/FieldDot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +89,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705914885388</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Проработал алгоритм поиска точки для выигрыша следующим ходом, или, если таковой нет, для предотвращения выигрыша человека следующим ходом.">
+      <option name="closed" value="true" />
+      <created>1705915952476</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705915952476</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -99,17 +107,7 @@
     <MESSAGE value="Улучшил проверку выигрыша в игре" />
     <MESSAGE value="Начал прорабатывать интеллект компьютера" />
     <MESSAGE value="Рефакторинг исходного кода" />
-    <option name="LAST_COMMIT_MESSAGE" value="Рефакторинг исходного кода" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/games/model/AI.java</url>
-          <line>62</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Проработал алгоритм поиска точки для выигрыша следующим ходом, или, если таковой нет, для предотвращения выигрыша человека следующим ходом." />
+    <option name="LAST_COMMIT_MESSAGE" value="Проработал алгоритм поиска точки для выигрыша следующим ходом, или, если таковой нет, для предотвращения выигрыша человека следующим ходом." />
   </component>
 </project>
