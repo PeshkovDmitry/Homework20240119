@@ -26,4 +26,12 @@ public class FieldDot {
     public boolean isUndefined() {
         return x == -1 && y == -1;
     }
+
+    @Override
+    public String toString() {
+        return "FieldDot{" +
+                "x=" + x +
+                ", y=" + y +
+                '}';
+    }
 }

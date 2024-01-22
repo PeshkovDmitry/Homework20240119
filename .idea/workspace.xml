@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4dca871-d266-42ce-8346-6bc78173638e" name="Changes" comment="Начал прорабатывать интеллект компьютера">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/games/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/games/model/FieldDot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/games/view/Panel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/resources/Config.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/games/view/MainWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/model/AI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Advisor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/model/Advisor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/model/Field.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FieldDot.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Human.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/presenter/TicTacToe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/model/AI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/model/AI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/model/Advisor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/model/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/model/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/model/FieldDot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/model/FieldDot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/presenter/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/presenter/TicTacToe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/games/view/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/view/Panel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>

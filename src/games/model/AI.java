@@ -1,31 +1,70 @@
 package games.model;
 
-import games.model.Advisor;
-import games.model.FieldDot;
-
 import java.util.Random;
 
-public class AI {
-    private final char DOT;
-    private Random random;
+import static games.resources.Config.*;
 
-    public AI(char ch){
-        DOT = ch;
-        random = new Random();
+public class AI {
+
+    private Field field;
+
+    public AI(Field field) {
+        this.field = field;
     }
 
-    public void turn(Field field) {
+    public void turn() {
         int x, y;
-        FieldDot recommendedDot =  Advisor.getRecommendedDot(field);
+        FieldDot recommendedDot =  getRecommendedDot();
+        System.out.println(field);
         if (recommendedDot.isUndefined()) {
             do {
-                x = random.nextInt(field.getSize());
-                y = random.nextInt(field.getSize());
+                x = new Random().nextInt(FIELD_SIZE);
+                y = new Random().nextInt(FIELD_SIZE);
             } while (!field.isCellValid(x, y));
         } else {
             x = recommendedDot.getX();
             y = recommendedDot.getY();
         }
-        field.setDot(x, y, DOT);
+        field.setDot(x, y, AI_DOT);
+    }
+
+    /**
+     * Метод для получения наиболее оптимальной точки
+     * @return Оптимальная точка
+     */
+    public FieldDot getRecommendedDot() {
+        FieldDot recommendedDot;
+        // Проверяем, есть ли точка, обеспечивающая выигрыш одним ходом
+        recommendedDot = getWinnerDot(AI_DOT);
+        if (!recommendedDot.isUndefined()) {
+            return recommendedDot;
+        }
+//        // Проверяем, есть ли точка, обеспечивающая выигрыш человека одним ходом
+//        recommendedDot = getWinnerDot(field.getMap(), field.getHumanDot(), field.getEmptyDot(), field.getSize());
+//        if (!recommendedDot.isUndefined()) {
+//            return recommendedDot;
+//        }
+        return new FieldDot();
+    }
+
+    /**
+     * Метод, возвращающий точку, обеспечивающую выигрыш одним ходом
+     * @param dot Тип точки (компьютер/игрок)
+     * @return Точка игрового поля
+     */
+
+    public FieldDot getWinnerDot(char dot) {
+        char[][] map = field.getMap();
+        for (int i = 0; i < FIELD_SIZE; i++) {
+            for (int j = 0; j < FIELD_SIZE; j++) {
+                if (map[i][j] == EMPTY_DOT) {
+                    map[i][j] = dot;
+                    if (field.checkWin(dot, map)) {
+                        return new FieldDot(i, j);
+                    }
+                }
+            }
+        }
+        return new FieldDot();
     }
 }
