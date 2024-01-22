@@ -15,7 +15,7 @@ public class AI {
     public void turn() {
         int x, y;
         FieldDot recommendedDot =  getRecommendedDot();
-        System.out.println(field);
+        System.out.println(recommendedDot);
         if (recommendedDot.isUndefined()) {
             do {
                 x = new Random().nextInt(FIELD_SIZE);
@@ -39,11 +39,11 @@ public class AI {
         if (!recommendedDot.isUndefined()) {
             return recommendedDot;
         }
-//        // Проверяем, есть ли точка, обеспечивающая выигрыш человека одним ходом
-//        recommendedDot = getWinnerDot(field.getMap(), field.getHumanDot(), field.getEmptyDot(), field.getSize());
-//        if (!recommendedDot.isUndefined()) {
-//            return recommendedDot;
-//        }
+        // Проверяем, есть ли точка, предотвращающая выигрыш человека следующим ходом
+        recommendedDot = getWinnerDot(HUMAN_DOT);
+        if (!recommendedDot.isUndefined()) {
+            return recommendedDot;
+        }
         return new FieldDot();
     }
 
@@ -54,9 +54,9 @@ public class AI {
      */
 
     public FieldDot getWinnerDot(char dot) {
-        char[][] map = field.getMap();
         for (int i = 0; i < FIELD_SIZE; i++) {
             for (int j = 0; j < FIELD_SIZE; j++) {
+                char[][] map = field.getMap();
                 if (map[i][j] == EMPTY_DOT) {
                     map[i][j] = dot;
                     if (field.checkWin(dot, map)) {

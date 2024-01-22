@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4dca871-d266-42ce-8346-6bc78173638e" name="Changes" comment="Начал прорабатывать интеллект компьютера">
-      <change afterPath="$PROJECT_DIR$/src/games/resources/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/games/view/MainWindow.java" afterDir="false" />
+    <list default="true" id="f4dca871-d266-42ce-8346-6bc78173638e" name="Changes" comment="Рефакторинг исходного кода">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/games/model/AI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/model/AI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/games/model/Advisor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/games/model/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/model/Field.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/games/model/FieldDot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/model/FieldDot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/games/presenter/TicTacToe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/presenter/TicTacToe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/games/view/Panel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/games/view/Panel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +81,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705785857227</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Рефакторинг исходного кода">
+      <option name="closed" value="true" />
+      <created>1705914885388</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705914885388</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -96,6 +98,18 @@
     <MESSAGE value="Убрал пакеты, они не нужны" />
     <MESSAGE value="Улучшил проверку выигрыша в игре" />
     <MESSAGE value="Начал прорабатывать интеллект компьютера" />
-    <option name="LAST_COMMIT_MESSAGE" value="Начал прорабатывать интеллект компьютера" />
+    <MESSAGE value="Рефакторинг исходного кода" />
+    <option name="LAST_COMMIT_MESSAGE" value="Рефакторинг исходного кода" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/games/model/AI.java</url>
+          <line>62</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -11,7 +11,7 @@ public class TicTacToe {
 
     public TicTacToe() {
 
-        Field field = new Field(FIELD_SIZE, CELL_SIZE);
+        Field field = new Field();
         AI ai = new AI(field);
         MainWindow mainWindow = new MainWindow(field, ai);
         mainWindow.showMainWindow();

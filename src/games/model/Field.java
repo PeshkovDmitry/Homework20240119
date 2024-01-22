@@ -9,8 +9,8 @@ public class Field {
     private char[][] map;
     private String gameOverMsg;
 
-    public Field(int field_size, int cell_size){
-        map = new char[field_size][field_size];
+    public Field(){
+        map = new char[FIELD_SIZE][FIELD_SIZE];
         init();
     }
 

@@ -1,5 +1,7 @@
 package games.model;
 
+import static games.resources.Config.*;
+
 public class FieldDot {
 
     private int x;
@@ -29,9 +31,8 @@ public class FieldDot {
 
     @Override
     public String toString() {
-        return "FieldDot{" +
-                "x=" + x +
-                ", y=" + y +
-                '}';
+        if (isUndefined())
+            return "Неопределено";
+        return "{x=" + x + ", y=" + (FIELD_SIZE - y - 1) + "}";
     }
 }
